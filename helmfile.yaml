@@ -6,4 +6,5 @@ repositories:
 releases:
 - name: sentry
   chart: sentry/sentry
-
+  values:
+  - values.yaml
