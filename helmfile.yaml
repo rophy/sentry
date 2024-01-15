@@ -1,0 +1,9 @@
+helmDefaults:
+  createNamespace: false
+repositories:
+- name: sentry
+  url: https://sentry-kubernetes.github.io/charts
+releases:
+- name: sentry
+  chart: sentry/sentry
+
