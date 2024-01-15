@@ -1,5 +1,6 @@
 helmDefaults:
   createNamespace: false
+  timeout: 1200
 repositories:
 - name: sentry
   url: https://sentry-kubernetes.github.io/charts
