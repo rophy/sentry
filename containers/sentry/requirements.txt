@@ -1,0 +1,1 @@
+sentry-auth-oidc==7.0.0
