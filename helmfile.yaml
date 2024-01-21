@@ -1,11 +1,16 @@
 helmDefaults:
-  createNamespace: false
+  createNamespace: true
   timeout: 1200
 repositories:
 - name: sentry
   url: https://sentry-kubernetes.github.io/charts
 releases:
-- name: sentry
+- namespace: sentry
+  name: casdoor
+  chart: ./charts/casdoor
+- namespace: sentry
+  name: sentry
   chart: sentry/sentry
+  version: 21.0.0
   values:
   - values.yaml

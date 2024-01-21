@@ -1,8 +1,28 @@
+images:
+  sentry:
+    repository: rophy/sentry
+    tag: 23.6.1-20240121-r1
 user:
   email: admin@sentry.local
   password: aaaa
 sentry:
   singleOrganization: false
+  web:
+    env:
+    - name: OIDC_CLIENT_ID
+      value: ae190e34deba14dd44b3
+    - name: OIDC_CLIENT_SECRET
+      value: 2224049487eb09684f51161f3da6b2e802fa005e
+    - name: OIDC_SCOPE
+      value: openid email
+    - name: OIDC_AUTHORIZATION_ENDPOINT
+      value: http://localhost:8000/login/oauth/authorize
+    - name: OIDC_TOKEN_ENDOINT
+      value: http://localhost:8000/api/login/oauth/access_token
+    - name: OIDC_USERINFO_ENDPOINT
+      value: http://localhost:8000/api/userinfo
+    - name: OIDC_ISSUER
+      value: casdoor
 postgresql:
   auth:
     postgresPassword: aaaa
@@ -13,3 +33,15 @@ clickhouse:
         storage: "1Gi"
 hooks:
   activeDeadlineSeconds: 600
+config:
+  sentryConfPy: |
+    # Extra sentry.conf.py
+
+    import os
+    OIDC_CLIENT_ID = os.getenv('OIDC_CLIENT_ID')
+    OIDC_CLIENT_SECRET = os.getenv('OIDC_CLIENT_SECRET')
+    OIDC_SCOPE = os.getenv('OIDC_SCOPE')
+    OIDC_AUTHORIZATION_ENDPOINT = os.getenv('OIDC_AUTHORIZATION_ENDPOINT')
+    OIDC_TOKEN_ENDOINT = os.getenv('OIDC_TOKEN_ENDOINT')
+    OIDC_USERINFO_ENDPOINT = os.getenv('OIDC_USERINFO_ENDPOINT')
+    OIDC_ISSUER = os.getenv('OIDC_ISSUER')

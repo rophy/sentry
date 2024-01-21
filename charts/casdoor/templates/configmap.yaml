@@ -22,6 +22,6 @@ data:
     verificationCodeTimeout = 10
     initScore = 2000
     logPostOnly = true
-    origin = "https://door.casdoor.com"
+    origin = "http://localhost:8000"
     staticBaseUrl = "https://cdn.casbin.org"
     enableGzip = true
