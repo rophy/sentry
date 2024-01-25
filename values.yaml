@@ -10,19 +10,21 @@ sentry:
   web:
     env:
     - name: OIDC_CLIENT_ID
-      value: ae190e34deba14dd44b3
+      value: Iv1.b385556f38557fbc
     - name: OIDC_CLIENT_SECRET
-      value: 2224049487eb09684f51161f3da6b2e802fa005e
+      value: xxx # generate new one
     - name: OIDC_SCOPE
       value: openid email
     - name: OIDC_AUTHORIZATION_ENDPOINT
-      value: http://localhost:8000/login/oauth/authorize
-    - name: OIDC_TOKEN_ENDOINT
-      value: http://localhost:8000/api/login/oauth/access_token
+      value: https://github.com/login/oauth/authorize
+    - name: OIDC_TOKEN_ENDPOINT
+      value: https://github.com/login/oauth/access_token
     - name: OIDC_USERINFO_ENDPOINT
-      value: http://localhost:8000/api/userinfo
+      value: https://github.com/api/userinfo
     - name: OIDC_ISSUER
-      value: casdoor
+      value: github-oauth
+system:
+  url: http://sentry-nginx
 postgresql:
   auth:
     postgresPassword: aaaa
@@ -42,6 +44,6 @@ config:
     OIDC_CLIENT_SECRET = os.getenv('OIDC_CLIENT_SECRET')
     OIDC_SCOPE = os.getenv('OIDC_SCOPE')
     OIDC_AUTHORIZATION_ENDPOINT = os.getenv('OIDC_AUTHORIZATION_ENDPOINT')
-    OIDC_TOKEN_ENDOINT = os.getenv('OIDC_TOKEN_ENDOINT')
+    OIDC_TOKEN_ENDPOINT = os.getenv('OIDC_TOKEN_ENDPOINT')
     OIDC_USERINFO_ENDPOINT = os.getenv('OIDC_USERINFO_ENDPOINT')
     OIDC_ISSUER = os.getenv('OIDC_ISSUER')
