@@ -4,10 +4,16 @@ helmDefaults:
 repositories:
 - name: sentry
   url: https://sentry-kubernetes.github.io/charts
+- name: codecentric
+  url: https://codecentric.github.io/helm-charts
 releases:
 - namespace: sentry
   name: casdoor
   chart: ./charts/casdoor
+- namespace: sentry
+  name: mailhog
+  chart: codecentric/mailhog
+  version: 5.2.3
 - namespace: sentry
   name: sentry
   chart: sentry/sentry
