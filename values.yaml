@@ -36,6 +36,13 @@ clickhouse:
 hooks:
   activeDeadlineSeconds: 600
 config:
+  configYml:
+    mail.backend: smtp
+    mail.host: mailhog.sentry.svc.cluster.local
+    mail.port: 1025
+    mail.from: admin@sentry.local
+    mail.list-namespace: sentry.local
+
   sentryConfPy: |
     # Extra sentry.conf.py
 
