@@ -25,3 +25,312 @@ data:
     origin = "http://localhost:8000"
     staticBaseUrl = "https://cdn.casbin.org"
     enableGzip = true
+
+  init_data.json: |
+    {
+      "organizations": [
+        {
+          "owner": "admin",
+          "name": "sentry",
+          "displayName": "sentry",
+          "websiteUrl": "http://casdoor:8000",
+          "favicon": "",
+          "passwordType": "plain",
+          "passwordSalt": "",
+          "passwordOptions": ["AtLeast6"],
+          "countryCodes": ["US"],
+          "defaultAvatar": "",
+          "defaultApplication": "",
+          "tags": [],
+          "languages": ["en"],
+          "masterPassword": "",
+          "defaultPassword": "",
+          "initScore": 2000,
+          "enableSoftDeletion": false,
+          "isProfilePublic": true,
+          "accountItems": []
+        }
+      ],
+      "applications": [
+        {
+          "owner": "admin",
+          "name": "sentry",
+          "displayName": "sentry",
+          "logo": "",
+          "homepageUrl": "",
+          "organization": "",
+          "cert": "",
+          "enablePassword": true,
+          "enableSignUp": false,
+          "clientId": "81a39e63a2eff8ca76a1",
+          "clientSecret": "16f4967467fc2dfae42c7b86112f4e0db98df14c",
+          "providers": [
+            {
+              "name": "",
+              "canSignUp": true,
+              "canSignIn": true,
+              "canUnlink": false,
+              "prompted": false,
+              "alertType": "None"
+            }
+          ],
+          "signinMethods": [
+            {
+              "name": "Password",
+              "displayName": "Password",
+              "rule": "All",
+            }
+          ],
+          "signupItems": [],
+          "redirectUris": [""],
+          "expireInHours": 168,
+          "failedSigninLimit": 5,
+          "failedSigninFrozenTime": 15
+        }
+      ],
+      "users": [
+        {
+          "owner": "sentry",
+          "name": "user-1",
+          "type": "normal-user",
+          "password": "aaaa1234",
+          "displayName": "user-2",
+          "avatar": "https://cdn.casbin.org/img/casbin.svg",
+          "email": "79vorm@example.com",
+          "phone": "36447499532",
+          "countryCode": "US",
+          "address": [],
+          "affiliation": "Example Inc.",
+          "tag": "",
+          "score": 2000,
+          "ranking": 1,
+          "isAdmin": false,
+          "isForbidden": false,
+          "isDeleted": false,
+          "signupApplication": "",
+          "createdIp": ""
+        },
+        {
+          "owner": "sentry",
+          "name": "user-2",
+          "type": "normal-user",
+          "password": "aaaa1234",
+          "displayName": "user-2",
+          "avatar": "https://cdn.casbin.org/img/casbin.svg",
+          "email": "6kd12@example.com",
+          "phone": "12312312312",
+          "countryCode": "US",
+          "address": [],
+          "affiliation": "Example Inc.",
+          "tag": "",
+          "score": 2000,
+          "ranking": 1,
+          "isAdmin": false,
+          "isForbidden": false,
+          "isDeleted": false,
+          "signupApplication": "",
+          "createdIp": ""
+        }  
+      ],
+      "providers": [
+        {
+          "owner": "",
+          "name": "",
+          "displayName": "",
+          "category": "",
+          "type": ""
+        }
+      ],
+      "certs": [
+        {
+          "owner": "",
+          "name": "",
+          "displayName": "",
+          "scope": "JWT",
+          "type": "x509",
+          "cryptoAlgorithm": "RS256",
+          "bitSize": 4096,
+          "expireInYears": 20,
+          "certificate": "",
+          "privateKey": ""
+        }
+      ],
+      "ldaps": [
+        {
+          "id": "",
+          "owner": "",
+          "serverName": "",
+          "host": "",
+          "port": 389,
+          "username": "",
+          "password": "",
+          "baseDn": "",
+          "autoSync": 0,
+          "lastSync": ""
+        }
+      ],
+      "models": [
+        {
+          "owner": "",
+          "name": "",
+          "modelText": "",
+          "displayName": ""
+        }
+      ],
+      "permissions": [
+        {
+          "actions": [],
+          "displayName": "",
+          "effect": "",
+          "isEnabled": true,
+          "model": "",
+          "name": "",
+          "owner": "",
+          "resourceType": "",
+          "resources": [],
+          "roles": [],
+          "users": []
+        }
+      ],
+      "payments": [
+        {
+          "currency": "",
+          "detail": "",
+          "displayName": "",
+          "invoiceRemark": "",
+          "invoiceTaxId": "",
+          "invoiceTitle": "",
+          "invoiceType": "",
+          "invoiceUrl": "",
+          "message": "",
+          "name": "",
+          "organization": "",
+          "owner": "",
+          "payUrl": "",
+          "personEmail": "",
+          "personIdCard": "",
+          "personName": "",
+          "personPhone": "",
+          "price": 0,
+          "productDisplayName": "",
+          "productName": "",
+          "provider": "",
+          "returnUrl": "",
+          "state": "",
+          "tag": "",
+          "type": "",
+          "user": ""
+        }
+      ],
+      "products": [
+        {
+          "currency": "",
+          "detail": "",
+          "displayName": "",
+          "image": "",
+          "name": "",
+          "owner": "",
+          "price": 0,
+          "providers": [],
+          "quantity": 0,
+          "returnUrl": "",
+          "sold": 0,
+          "state": "",
+          "tag": ""
+        }
+      ],
+      "resources": [
+        {
+          "owner": "",
+          "name": "",
+          "user": "",
+          "provider": "",
+          "application": "",
+          "tag": "",
+          "parent": "",
+          "fileName": "",
+          "fileType": "",
+          "fileFormat": "",
+          "url": "",
+          "description": ""
+        }
+      ],
+      "roles": [
+        {
+          "displayName": "",
+          "isEnabled": true,
+          "name": "",
+          "owner": "",
+          "roles": [],
+          "users": []
+        }
+      ],
+      "syncers": [
+        {
+          "affiliationTable": "",
+          "avatarBaseUrl": "",
+          "database": "",
+          "databaseType": "",
+          "errorText": "",
+          "host": "",
+          "isEnabled": false,
+          "name": "",
+          "organization": "",
+          "owner": "",
+          "password": "",
+          "port": 0,
+          "syncInterval": 0,
+          "table": "",
+          "tableColumns": [
+            {
+              "casdoorName": "",
+              "isHashed": true,
+              "name": "",
+              "type": "",
+              "values": []
+            }
+          ],
+          "tablePrimaryKey": "",
+          "type": "",
+          "user": ""
+        }
+      ],
+      "tokens": [
+        {
+          "accessToken": "",
+          "application": "",
+          "code": "",
+          "codeChallenge": "",
+          "codeExpireIn": 0,
+          "codeIsUsed": true,
+          "createdTime": "",
+          "expiresIn": 0,
+          "name": "",
+          "organization": "",
+          "owner": "",
+          "refreshToken": "",
+          "scope": "",
+          "tokenType": "",
+          "user": ""
+        }
+      ],
+      "webhooks": [
+        {
+          "contentType": "",
+          "events": [],
+          "headers": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ],
+          "isEnabled": true,
+          "isUserExtended": true,
+          "method": "",
+          "name": "",
+          "organization": "",
+          "owner": "",
+          "url": ""
+        }
+      ]
+    }

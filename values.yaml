@@ -10,19 +10,19 @@ sentry:
   web:
     env:
     - name: OIDC_CLIENT_ID
-      value: Iv1.b385556f38557fbc
+      value: 81a39e63a2eff8ca76a1
     - name: OIDC_CLIENT_SECRET
-      value: xxx # generate new one
+      value: 16f4967467fc2dfae42c7b86112f4e0db98df14c
     - name: OIDC_SCOPE
       value: openid email
     - name: OIDC_AUTHORIZATION_ENDPOINT
-      value: https://github.com/login/oauth/authorize
+      value: http://casdoor:8000/login/oauth/authorize
     - name: OIDC_TOKEN_ENDPOINT
-      value: https://github.com/login/oauth/access_token
+      value: http://casdoor:8000/api/login/oauth/access_token
     - name: OIDC_USERINFO_ENDPOINT
-      value: https://github.com/api/userinfo
+      value: http://casdoor:8000/api/userinfo
     - name: OIDC_ISSUER
-      value: github-oauth
+      value: casdoor
 system:
   url: http://sentry-nginx
 postgresql:
