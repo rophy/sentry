@@ -17,13 +17,16 @@ sentry.io demo deployment
 
 # Wait until helm ready, will take a couple minutes
 
-> sudo -E kubefwd services
+> sudo -E kubefwd svc -n sentry
 
 ```
 
 - sentry web: http://sentry-nginx/, login with `admin@sentry.local / aaaa`
 - casdoor web: http://casdoor:8000/, login with `admin / 123`
-- casdoor has an organization called `sentry` with 2 users:
+
+Login to sentry web and enable `casdoor` oidc.
+
+Casdoor have 2 extra users for testing oidc integrations:
   - `user-1 / aaaa123`
   - `user-2 / aaaa123`
 
