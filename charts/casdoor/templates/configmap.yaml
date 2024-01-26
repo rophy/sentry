@@ -22,18 +22,20 @@ data:
     verificationCodeTimeout = 10
     initScore = 2000
     logPostOnly = true
-    origin = "http://localhost:8000"
+    origin = "http://casdoor:8000"
     staticBaseUrl = "https://cdn.casbin.org"
     enableGzip = true
+    initDataFile = "/init_data.json"
+
 
   init_data.json: |
     {
       "organizations": [
         {
           "owner": "admin",
-          "name": "sentry",
-          "displayName": "sentry",
-          "websiteUrl": "http://casdoor:8000",
+          "name": "built-in",
+          "displayName": "Built-in Organization",
+          "websiteUrl": "https://example.com",
           "favicon": "",
           "passwordType": "plain",
           "passwordSalt": "",
@@ -53,17 +55,28 @@ data:
       ],
       "applications": [
         {
+          "enableSignUp": false,
+          "enableSigninSession": false,
+          "enableAutoSignin": false,
+          "enableCodeSignin": false,
+          "enableSamlCompress": false,
+          "enableSamlC14n10": false,
+          "enableWebAuthn": false,
+          "enableLinkWithEmail": false,
+          "orgChoiceMode": "",
+          "samlReplyUrl": "",
+
           "owner": "admin",
-          "name": "sentry",
-          "displayName": "sentry",
-          "logo": "",
-          "homepageUrl": "",
-          "organization": "",
-          "cert": "",
+          "name": "app-built-in",
+          "displayName": "Casdoor",
+          "logo": "https://cdn.casbin.org/img/casdoor-logo_1185x256.png",
+          "homepageUrl": "https://casdoor.org",
+          "organization": "built-in",
+          "cert": "cert-built-in",
           "enablePassword": true,
           "enableSignUp": false,
-          "clientId": "81a39e63a2eff8ca76a1",
-          "clientSecret": "16f4967467fc2dfae42c7b86112f4e0db98df14c",
+          "clientId": "5c54f0079424e3799cb1",
+          "clientSecret": "751aab3fa2c80c64a857013207d3601cb018cc16",
           "providers": [
             {
               "name": "",
@@ -78,7 +91,7 @@ data:
             {
               "name": "Password",
               "displayName": "Password",
-              "rule": "All",
+              "rule": "All"
             }
           ],
           "signupItems": [],
@@ -90,10 +103,10 @@ data:
       ],
       "users": [
         {
-          "owner": "sentry",
+          "owner": "built-in",
           "name": "user-1",
           "type": "normal-user",
-          "password": "aaaa1234",
+          "password": "aaaa123",
           "displayName": "user-2",
           "avatar": "https://cdn.casbin.org/img/casbin.svg",
           "email": "79vorm@example.com",
@@ -104,17 +117,17 @@ data:
           "tag": "",
           "score": 2000,
           "ranking": 1,
-          "isAdmin": false,
+          "isAdmin": true,
           "isForbidden": false,
           "isDeleted": false,
           "signupApplication": "",
           "createdIp": ""
         },
         {
-          "owner": "sentry",
+          "owner": "built-in",
           "name": "user-2",
           "type": "normal-user",
-          "password": "aaaa1234",
+          "password": "aaaa123",
           "displayName": "user-2",
           "avatar": "https://cdn.casbin.org/img/casbin.svg",
           "email": "6kd12@example.com",
@@ -125,7 +138,7 @@ data:
           "tag": "",
           "score": 2000,
           "ranking": 1,
-          "isAdmin": false,
+          "isAdmin": true,
           "isForbidden": false,
           "isDeleted": false,
           "signupApplication": "",

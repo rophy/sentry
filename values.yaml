@@ -10,9 +10,9 @@ sentry:
   web:
     env:
     - name: OIDC_CLIENT_ID
-      value: 81a39e63a2eff8ca76a1
+      value: 5c54f0079424e3799cb1
     - name: OIDC_CLIENT_SECRET
-      value: 16f4967467fc2dfae42c7b86112f4e0db98df14c
+      value: 751aab3fa2c80c64a857013207d3601cb018cc16
     - name: OIDC_SCOPE
       value: openid email
     - name: OIDC_AUTHORIZATION_ENDPOINT
