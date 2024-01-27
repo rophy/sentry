@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    image: sentry
+    build: .
+    entrypoint: /bin/bash
+    command: ["-c", "--", "while true; do sleep 30; done;"]
+    init: true
+    tty: true
+    working_dir: /usr/local/lib/python3.8/site-packages/sentry
+    volumes:
+    - ./patches:/tmp/patches
