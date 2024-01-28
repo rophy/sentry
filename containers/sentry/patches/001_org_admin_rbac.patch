@@ -1,0 +1,29 @@
+diff --git a/api/endpoints/team_projects.py b/api/endpoints/team_projects.py
+index 6624211..bd2b03c 100644
+--- a/api/endpoints/team_projects.py
++++ b/api/endpoints/team_projects.py
+@@ -48,7 +48,7 @@ class ProjectPostSerializer(serializers.Serializer):
+ class TeamProjectPermission(TeamPermission):
+     scope_map = {
+         "GET": ["project:read", "project:write", "project:admin"],
+-        "POST": ["project:write", "project:admin"],
++        "POST": ["project:admin"],
+         "PUT": ["project:write", "project:admin"],
+         "DELETE": ["project:admin"],
+     }
+diff --git a/conf/server.py b/conf/server.py
+index 19033df..00051ac 100644
+--- a/conf/server.py
++++ b/conf/server.py
+@@ -2170,11 +2170,8 @@ SENTRY_ROLES = (
+             "member:read",
+             "project:read",
+             "project:write",
+-            "project:admin",
+             "project:releases",
+             "team:read",
+-            "team:write",
+-            "team:admin",
+             "org:integrations",
+             "alerts:read",
+             "alerts:write",
