@@ -1,7 +1,7 @@
 images:
   sentry:
     repository: rophy/sentry
-    tag: 23.6.1-20240121-r1
+    tag: 23.6.1-20240128-r1
 user:
   email: admin@sentry.local
   password: aaaa
