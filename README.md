@@ -17,7 +17,7 @@ sentry.io demo deployment
 
 # Wait until helm ready, will take a couple minutes
 
-> sudo -E kubefwd svc -n sentry -f metadata.name=casdoor -f metadata.name=sentry-nginx
+> sudo -E kubefwd svc -n sentry -l "app.kubernetes.io/name in (nginx,casdoor)"
 
 ```
 

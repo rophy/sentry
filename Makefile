@@ -3,4 +3,4 @@ apply:
 	helmfile apply
 
 forward:
-	sudo -E kubefwd svc -n sentry -f metadata.name=casdoor -f metadata.name=sentry-nginx
+	sudo -E kubefwd svc -n sentry -l "app.kubernetes.io/name in (nginx,casdoor)"
