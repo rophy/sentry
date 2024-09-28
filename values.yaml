@@ -30,8 +30,9 @@ postgresql:
     postgresPassword: aaaa
   primary:
     resources:
-      limits:
-        cpu: 100m
+      # reduce cpu to simulate kafka lag due to postgresql compute power.
+      # limits:
+      #   cpu: 100m
       requests:
         cpu: 10m
         memory: 256Mi
