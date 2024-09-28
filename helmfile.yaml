@@ -20,3 +20,7 @@ releases:
   version: 21.0.0
   values:
   - values.yaml
+- namespace: sentry
+  name: burrow
+  chart: ./charts/burrow
+  version: 0.1.0
