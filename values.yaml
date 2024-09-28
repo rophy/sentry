@@ -28,6 +28,14 @@ system:
 postgresql:
   auth:
     postgresPassword: aaaa
+  primary:
+    resources:
+      limits:
+        cpu: 10m
+      requests:
+        cpu: 10m
+        memory: 256Mi
+
 clickhouse:
   clickhouse:
     persistentVolumeClaim:
