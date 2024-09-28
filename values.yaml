@@ -54,3 +54,5 @@ config:
     OIDC_TOKEN_ENDPOINT = os.getenv('OIDC_TOKEN_ENDPOINT')
     OIDC_USERINFO_ENDPOINT = os.getenv('OIDC_USERINFO_ENDPOINT')
     OIDC_ISSUER = os.getenv('OIDC_ISSUER')
+relay:
+  mode: proxy
