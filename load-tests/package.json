@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sentry/browser": "^8.32.0",
-    "@sentry/node": "^8.32.0"
+    "axios": "^1.7.7",
+    "short-uuid": "^5.2.0"
   }
 }
