@@ -7,7 +7,7 @@ apply:			## Install sentry
 	helmfile apply
 
 forward:		## Expose various sentry web interfaces via kubefwd.
-	sudo -E kubefwd svc -n sentry -l "app.kubernetes.io/name in (nginx,casdoor)"
+	sudo -E kubefwd svc -n sentry -l "app.kubernetes.io/name in (nginx,casdoor,burrow)"
 
 
 prereq:			## Install pre-requisites tools in your machine.

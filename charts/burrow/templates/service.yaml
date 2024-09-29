@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: burrow
+  labels:
+    app.kubernetes.io/name: burrow
+spec:
+  selector:
+    app.kubernetes.io/name: burrow
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000

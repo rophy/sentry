@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: burrow
   labels:
-    app: burrow
+    app.kubernetes.io/name: burrow
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: burrow
+      app.kubernetes.io/name: burrow
   template:
     metadata:
       labels:
-        app: burrow
+        app.kubernetes.io/name: burrow
     spec:
       containers:
       - name: burrow
