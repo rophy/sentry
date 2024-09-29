@@ -28,6 +28,7 @@ system:
 postgresql:
   auth:
     postgresPassword: aaaa
+  postgresqlSharedPreloadLibraries: pgaudit,pg_stat_statements
   primary:
     resources:
       # reduce cpu to simulate kafka lag due to postgresql compute power.
